@@ -1,0 +1,45 @@
+#register-h1 {
+    text-align: center;
+    color: #006238;
+    font-family: "Rubik", sans-serif;
+}
+
+#reg-form {
+    font-family: "Rubik", sans-serif;
+    margin: 25px 5px 5px 280px;
+    display: grid;
+    top: 229px;
+    left: 560px;
+    width: 520px;
+    height: 500px;
+    border-radius: 15px;
+    /* margin: 5% 0 0 30%; */
+    background-color: white;
+}
+
+#reg-form label {
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+#reg-form input {
+    border-radius: 10px;
+    border: 2px solid #006238;
+    padding: 0 0 0 15px;
+    background-color: darkseagreen;
+}
+
+#reg-form input:focus {
+    box-shadow: 0 0 10px 0 #006238;
+    border: none;
+    outline: none;
+}
+
+#register-footer {
+    font-family: "Rubik", sans-serif;
+    text-align: center;
+    color: #F6F6F6;
+    background-color: #006238;
+    height: 4vh;
+    margin-top: 6px;
+}

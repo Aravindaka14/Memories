@@ -1,0 +1,80 @@
+#login-h1 {
+    text-align: center;
+    color: #006238;
+    font-family: "Rubik", sans-serif;
+}
+
+#div-container {
+    display: flex;
+    font-family: "Rubik", sans-serif;
+}
+
+#left-div {
+    display: inline;
+    float: left;
+}
+
+#left-div img {
+    height: 80vh;
+    margin: 5px 5px 5px 80px;
+}
+
+#right-div {
+    display: inline;
+    float: right;
+}
+
+#right-div #log-form {
+    margin: 85px 5px 5px 280px;
+    display: grid;
+    top: 229px;
+    left: 560px;
+    width: 570px;
+    height: 300px;
+    border-radius: 15px;
+    /* margin: 5% 0 0 30%; */
+    background-color: white;
+}
+
+#log-form input {
+    border-radius: 10px;
+    border: 2px solid #006238;
+    padding: 0 0 0 15px;
+    background-color: darkseagreen;
+}
+
+#log-form input:focus {
+    box-shadow: 0 0 10px 0 #006238;
+    outline: none;
+    border: none;
+}
+
+#right-div #log-form label {
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+#navigate-section {
+    margin: 5px 5px 5px 280px;
+}
+
+.form-btn {
+    margin: 36px 0 0 36px;
+    height: 28px;
+    width: 70px;
+    border-radius: 5px;
+    font-size: medium;
+    color: lightgray;
+    background-color: #006238;
+    border-color: #006238;
+    font-family: "Rubik", sans-serif;
+}
+
+#login-footer {
+    font-family: "Rubik", sans-serif;
+    text-align: center;
+    color: #F6F6F6;
+    background-color: #006238;
+    height: 4vh;
+    margin-top: 6px;
+}
