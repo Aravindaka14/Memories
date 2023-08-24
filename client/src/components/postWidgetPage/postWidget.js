@@ -10,22 +10,29 @@ const PostWidget = () => {
     const [post, setPost] = useState({})
     const handleData = async (e) => {
         e.preventDefault()
-        await axios({ method: "POST", url: "http://localhost:3005/form", data: post }).catch((err) => {
+        await axios({ method: "POST", url: "http://localhost:3005/postwidget", data: post }).catch((err) => {
             console.log(err)
         }).finally(() => {
             navigate("/home")
         })
     }
-    const naviForm = () => {
-        navigate("/home")
+    const naviForm = (path) => {
+        navigate(`/${path}`)
+    }
+    const logout = () => {
+        navigate('/')
     }
     return (
         <div className="formDiv">
             <header>
-                {/* <img className="nameLogo" src="nameLogo.svg" alt="" /> */}
                 <i className="fa fa-instagram"></i>
                 <span>Memories</span>
-                <button className="camera" onClick={() => naviForm()}><i className="fa fa-camera"></i></button>
+                <select onChange={() => logout()}>
+                    <option>Username</option>
+                    <option><button >Logout</button></option>
+                </select>
+                <button className="camera" onClick={() => naviForm("postWidget")}><i className="fa fa-camera"></i></button>
+                <button className="camera" onClick={() => naviForm("home")}><i className="fa fa-home"></i></button>
             </header>
             <form id="post-form" onSubmit={handleData} >
                 <div id="filebase64">

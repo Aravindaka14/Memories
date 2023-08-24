@@ -7,6 +7,7 @@ import "./login.css";
 const Login = () => {
     const navigate = useNavigate();
     let [loginState, setLoginState] = useState({})
+
     const sendLoginInput = async (e) => {
         e.preventDefault()
         // console.log(loginState)
@@ -17,6 +18,7 @@ const Login = () => {
         }).then((res) => {
             // console.log(data)
             localStorage.setItem("authorization", res.data.authToken)
+            navigate('/home')
             // authToken stored in cookie
             // document.cookie= `authToken : ${res.data.authToken}`
         }).catch((err) => {
@@ -24,7 +26,7 @@ const Login = () => {
         })
     }
     const naviSignUp = () => {
-        navigate("/signUp")
+        navigate("/register")
     }
     return (
         <div>
@@ -45,7 +47,7 @@ const Login = () => {
                         <button className="form-btn2" type="submit">Submit</button>
                     </form>
                     <div id="navigate-section">
-                        <h3>Don't have an account <button className="form-btn" onClick={() => { naviSignUp() }}>SignUp</button></h3>
+                        <h3>Don't have an account <button className="form-btn" onClick={() => { naviSignUp() }}>Register</button></h3>
 
                     </div>
                 </div>

@@ -32,7 +32,6 @@
     width: 570px;
     height: 300px;
     border-radius: 15px;
-    /* margin: 5% 0 0 30%; */
     background-color: white;
 }
 
@@ -68,6 +67,7 @@
     background-color: #006238;
     border-color: #006238;
     font-family: "Rubik", sans-serif;
+    padding: 0;
 }
 
 #login-footer {
@@ -76,5 +76,5 @@
     color: #F6F6F6;
     background-color: #006238;
     height: 4vh;
-    margin-top: 6px;
+    padding-top: 8px;
 }

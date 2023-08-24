@@ -14,6 +14,7 @@
     margin: 5% 0 0 30%;
     background-color: white;
     font-family: "Rubik", sans-serif;
+    box-shadow: 2px 2px 6px 2px lightgrey;
 }
 
 .post-form-input {
@@ -60,5 +61,6 @@
     height: 4vh;
     position: relative;
     width: 100%;
-    top: 217px;
+    top: 210px;
+    padding-top: 8px;
 }

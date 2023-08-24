@@ -14,20 +14,20 @@ header {
 .fa-instagram {
     top: 50px;
     left: 200px;
-    width: 48px;
+    width: 36px;
     height: 48px;
-    font-size: 48px;
-    padding: 10px 5px 5px 100px;
+    font-size: 36px;
+    padding: 14px 2px 5px 100px;
 }
 
-span {
+header span {
     position: absolute;
-    /* font: normal normal normal 42px/38px Palatino; */
-    font: normal normal normal 40px/38px "Rubik", sans-serif;
+    font: normal normal normal 30px/38px "Rubik", sans-serif;
     letter-spacing: 0px;
     color: #006238;
     display: inline;
     margin: 15px 0 0 0;
+    font-weight: 600;
 }
 
 .camera {
@@ -35,25 +35,42 @@ span {
     border: none;
     float: right;
     width: 54px;
-    height: 54px;
-    margin: 10px 60px 0 0;
-    font-size: 38px;
+    height: 58px;
+    margin: 10px 15px 0 0;
+    font-size: 32px;
     cursor: pointer;
+}
+
+select {
+    display: inline;
+    float: right;
+    margin: 22px 60px 0 0;
+    padding: 6px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 2px 2px 4px 1px lightgrey;
+    cursor: pointer;
+}
+
+select:focus {
+    outline: none;
 }
 
 main {
     width: inherit;
     background-color: #F6F6F6;
-    min-height: 83vh;
+    min-height: 82vh;
 }
 
 .contentDiv {
     border-radius: 10px;
     margin: 5% 30%;
-    width: 590px;
-    height: 520px;
+    width: 530px;
+    height: 620px;
     text-align: left;
     background-color: white;
+    box-shadow: 4px 4px 4px 1px lightgrey;
 }
 
 .fa-user-circle {
@@ -87,9 +104,9 @@ main {
 }
 
 .postImage {
-    width: 560px;
-    height: 300px;
-    padding: 15px;
+    width: 500px;
+    height: 465px;
+    padding: 0 15px;
     border-radius: 20px;
 }
 
@@ -110,8 +127,9 @@ main {
 }
 
 .postLikes {
-    margin: 5px 0 5px 25px;
+    margin: 2px 0 5px 5px;
     font-family: "Rubik", sans-serif;
+    font-size: larger;
 }
 
 .postDes {
@@ -125,7 +143,7 @@ main {
     background-color: white;
     border: none;
     color: red;
-    padding: 10px 0 0 18px;
+    padding: 2px 0 0 18px;
     font-size: 28px;
     cursor: pointer;
     display: inline-block;
@@ -139,7 +157,7 @@ main {
     background-color: white;
     border: none;
     color: none;
-    padding: 10px 0 0 18px;
+    padding: 2px 0 0 18px;
     font-size: 28px;
     cursor: pointer;
     display: inline-block;
@@ -149,9 +167,9 @@ main {
     text-align: center;
     color: #F6F6F6;
     background-color: #006238;
-    position: relative;
     width: 100%;
     height: 4vh;
     bottom: 0px;
     font-family: "Rubik", sans-serif;
+    padding-top: 8px;
 }

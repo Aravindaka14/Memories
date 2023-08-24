@@ -6,7 +6,7 @@ import dotenv from "dotenv";
 import Jwt from "jsonwebtoken";
 import postRoutes from "./routes/postWidget.js";
 import postsRoutes from "./routes/home.js";
-import signUpRoutes from "./routes/signUp.js";
+import registerRoutes from "./routes/register.js";
 import loginRoutes from "./routes/login.js";
 
 const app = express()
@@ -17,24 +17,24 @@ app.use(cors())
 app.use(mul.array())
 dotenv.config();
 
-const unProtectedRoutes = ["/", "signUp"];
-app.use((req, res, next) => {
-    unProtectedRoutes.forEach((route) => {
-        if (req.url.includes(route)) {
-            next();
-        } else {
-            const authorization = Jwt.verify(req.headers.authorization, process.env.secretKey)
-        }
-    })
+// const unProtectedRoutes = ["/", "signup"];
+// app.use((req, res, next) => {
+//     unProtectedRoutes.forEach((route) => {
+//         if (req.url.includes(route)) {
+//             next();
+//         } else {
+//             const authorization = Jwt.verify(req.headers.authorization, process.env.secretKey)
+//         }
+//     })
 
-    next();
-    // console.log(req.headers, "from middleware")
-})
+//     // next();
+//     // console.log(req.headers, "from middleware")
+// })
 
 //middleware
 app.use("/", postRoutes);
 app.use("/", postsRoutes);
-app.use("/", signUpRoutes);
+app.use("/", registerRoutes);
 app.use("/", loginRoutes);
 
 

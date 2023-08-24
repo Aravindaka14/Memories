@@ -15,7 +15,7 @@ const checkExistingEmail = async (email) => {
     return inValid;
 }
 
-router.post("/signUp", async (req, res) => {
+router.post("/register", async (req, res) => {
     // res.status(200).send("register Api")
     // console.log(req.body.phone)
     if (await checkExistingEmail(req.body.email)) {

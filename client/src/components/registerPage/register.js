@@ -2,9 +2,9 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "./signup.css";
+import "./register.css";
 
-const SignUp = () => {
+const Register = () => {
     const navigate = useNavigate();
     const [signUpState, setSignUpState] = useState({})
 
@@ -12,7 +12,7 @@ const SignUp = () => {
         e.preventDefault()
         // console.log(signUpState)
         axios({
-            url: "http://localhost:3005/signUp",
+            url: "http://localhost:3005/register",
             method: "POST",
             headers: {
                 // header content comes here
@@ -24,12 +24,14 @@ const SignUp = () => {
         }).catch((err) => {
             console.log(err)
         })
-
+    }
+    const naviLogin = () => {
+        navigate("/")
     }
     return (
         <div>
             <h1 id="register-h1">
-                SignUp page
+                Register page
             </h1>
             <br></br>
             <div id="div-container">
@@ -48,6 +50,9 @@ const SignUp = () => {
                         <input type="number" placeholder="phone no...." onChange={(e) => { setSignUpState({ ...signUpState, phone: e.target.value }) }}></input>
                         <button className="form-btn2" type="submit">Submit</button>
                     </form>
+                    <div id="navigate-section">
+                        <h3>Don't have an account <button className="form-btn" onClick={() => { naviLogin() }}>Login</button></h3>
+                    </div>
                 </div>
             </div>
             <footer id="register-footer">
@@ -57,4 +62,4 @@ const SignUp = () => {
     )
 }
 
-export default SignUp;
+export default Register;

@@ -25,16 +25,24 @@ const Home = () => {
         })
     }
     const navigate = useNavigate()
-    const navi = () => {
-        navigate(`/postWidget`)
-    }
 
+    const navi = (path) => {
+        navigate(`/${path}`)
+    }
+    const logout = () => {
+        navigate("/")
+    }
     return (
         <div className="postDiv">
             <header>
                 <i className="fa fa-instagram"></i>
                 <span>Memories</span>
-                <button className="camera" onClick={() => navi()}><i className="fa fa-camera"></i></button>
+                <select onChange={() => logout()}>
+                    <option>Username</option>
+                    <option >Logout</option>
+                </select>
+                <button className="camera" onClick={() => navi("home")}><i className="fa fa-home"></i></button>
+                <button className="camera" onClick={() => navi("postWidget")}><i className="fa fa-camera"></i></button>
             </header>
             <main>
                 {
@@ -48,10 +56,10 @@ const Home = () => {
                                     <i className="fa fa-bookmark"></i>
                                     <p className="userLoc">{post.location}</p>
                                     <img className="postImage" src={post.image.base64} alt="" />
-                                    <button className="post-btn" onClick={() => { likeHandler(post) }}><i className="fa fa-heart"></i></button>
+                                    <button className="post-btn" onClick={() => { likeHandler(post) }}><i className="fa fa-heart"></i></button><span className="postLikes">{post.likes}</span>
                                     <button className="post-btn2"><i className="fa fa-share-alt"></i></button>
                                     <p className="postDate">{post.date}</p>
-                                    <p className="postLikes">{post.likes} Likes</p>
+                                    {/* <p className="postLikes">{post.likes} Likes</p> */}
                                     <p className="postDes">{post.description}</p>
                                 </div>
                             )
