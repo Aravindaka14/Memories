@@ -18,7 +18,7 @@ const Register = () => {
         }).then((res) => {
             navigate('/')
         }).catch((err) => {
-            console.log(err.response.data)
+            // console.log(err.response.data)
             // alert(`${err.response.data}`)
             setUserErr(err.response.data)
         })

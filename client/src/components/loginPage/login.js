@@ -19,8 +19,7 @@ const Login = () => {
         }).then((response) => {
             navigate('/home')
         }).catch((err) => {
-            console.log(err.response.data)
-            // alert(`${err.response.data}`)
+            // console.log(err.response.data)
             setUserErr(err.response.data)
         })
     }
