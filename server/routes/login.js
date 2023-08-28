@@ -9,13 +9,9 @@ const router = express.Router();
 
 router.post("/login", (req, res) => {
     User.find({ email: req.body.email }).then((userdata) => {
-        // console.log(userdata)
         if (userdata.length) {
             bcrypt.compare(req.body.password, userdata[0].password).then((val) => {
-                // console.log(val)
                 if (val) {
-                    // const authToken = Jwt.sign(userdata[0].name, process.env.secretKey);
-                    // res.status(200).send({ authToken });
                     res.status(200).send('login successful')
                 } else {
                     res.status(400).send("Invalid Password")
@@ -29,7 +25,6 @@ router.post("/login", (req, res) => {
     }).catch((err) => {
         res.status(400).send(err)
     })
-    // res.send("login api")
 })
 
 export default router;

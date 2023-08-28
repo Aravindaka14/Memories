@@ -12,7 +12,6 @@ router.get("/home", async (req, res) => {
 
 router.put("/home/update", async (req, res) => {
     let like = await Post.find({ _id: req.body.id })
-    // console.log(req.body)
     like = like[0].likes + 1
     await Post.updateOne({ _id: req.body.id }, { likes: like })
     res.status(200).send("likes updated")

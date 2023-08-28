@@ -14,7 +14,7 @@
     margin: 3vh 15vw;
 }
 
-#innerContainer img {
+#innerContainerReg img {
     width: 35vw;
     height: 90vh;
     border-radius: 15px 0 0 15px;
@@ -50,6 +50,11 @@
     border-radius: 5px;
     border: 1px solid grey;
     background-color: floralwhite;
+}
+
+#register-form input:focus {
+    border: none;
+    outline: #006238 solid 2px;
 }
 
 .register-form-btn {

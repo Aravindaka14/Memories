@@ -52,6 +52,11 @@
     background-color: floralwhite;
 }
 
+#login-form input:focus {
+    border: none;
+    outline: #006238 solid 2px;
+}
+
 .login-form-btn {
     padding: 8px;
     margin: 20px 190px;
@@ -87,4 +92,42 @@
     cursor: pointer;
     color: #006238;
     text-decoration-line: underline;
+}
+
+.errContainer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+}
+
+.errBox {
+    border-radius: 5px;
+    color: red;
+    background-color: lavenderblush;
+    position: absolute;
+    left: 30%;
+    padding: 70px 150px;
+}
+
+.errBox button {
+    margin: 15px 90px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid cornflowerblue;
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 16px;
+    letter-spacing: 0.25em;
+}
+
+.errBox button:hover {
+    cursor: pointer;
+    background-color: royalblue;
 }

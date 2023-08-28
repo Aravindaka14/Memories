@@ -16,8 +16,6 @@ const checkExistingEmail = async (email) => {
 }
 
 router.post("/register", async (req, res) => {
-    // res.status(200).send("register Api")
-    // console.log(req.body.phone)
     if (await checkExistingEmail(req.body.email)) {
         res.status(400).send("Email already exist")
     } else {
