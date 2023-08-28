@@ -35,13 +35,14 @@ const PostWidget = () => {
                 <button className="camera" onClick={() => naviForm("home")}><i className="fa fa-home"></i></button>
             </header>
             <form id="post-form" onSubmit={handleData} >
+                <h3 id="post-form-title">Share your post here...</h3>
                 <div id="filebase64">
-                    <FileBase64 type="file" onDone={(base64) => { setPost({ ...post, image: base64 }) }} required={true}></FileBase64>
+                    <FileBase64 type="file" onDone={(base64) => { setPost({ ...post, image: base64 }) }} required={true} ></FileBase64>
                 </div>
                 <input className="post-form-input" type="text" placeholder="Author..." onChange={(e) => { setPost({ ...post, name: e.target.value }) }} required={true} />
                 <input className="post-form-input" type="text" placeholder="Location..." onChange={(e) => { setPost({ ...post, location: e.target.value }) }} required={true} />
                 <input className="post-form-input" type="text" placeholder="Description..." onChange={(e) => { setPost({ ...post, description: e.target.value }) }} required={true} />
-                <button className="form-btn2" type="submit">Post</button>
+                <button className="post-form-btn" type="submit">Post</button>
             </form>
             <footer id="form-footer">
                 &copy; 2023 - All Rights Reserved.

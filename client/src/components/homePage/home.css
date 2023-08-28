@@ -18,13 +18,14 @@ header {
     height: 48px;
     font-size: 36px;
     padding: 14px 2px 5px 100px;
+    color: crimson;
 }
 
 header span {
     position: absolute;
     font: normal normal normal 30px/38px "Rubik", sans-serif;
     letter-spacing: 0px;
-    color: #006238;
+    color: crimson;
     display: inline;
     margin: 15px 0 0 0;
     font-weight: 600;

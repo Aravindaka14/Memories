@@ -1,80 +1,90 @@
-#login-h1 {
-    text-align: center;
-    color: #006238;
-    font-family: "Rubik", sans-serif;
+#pageContainer {
+    width: 100vw;
+    height: 100vh;
+    background-color: #f6f6f6;
 }
 
-#div-container {
+#innerContainer {
     display: flex;
-    font-family: "Rubik", sans-serif;
-}
-
-#left-div {
-    display: inline;
-    float: left;
-}
-
-#left-div img {
+    width: 70vw;
     height: 80vh;
-    margin: 5px 5px 5px 80px;
-}
-
-#right-div {
-    display: inline;
-    float: right;
-}
-
-#right-div #log-form {
-    margin: 85px 5px 5px 280px;
-    display: grid;
-    top: 229px;
-    left: 560px;
-    width: 570px;
-    height: 300px;
+    box-shadow: 2px 2px 6px 2px lightgrey;
     border-radius: 15px;
-    background-color: white;
+    background-color: floralwhite;
+    margin: 8vh 15vw;
 }
 
-#log-form input {
-    border-radius: 10px;
-    border: 2px solid #006238;
-    padding: 0 0 0 15px;
-    background-color: darkseagreen;
+#innerContainer img {
+    width: 35vw;
+    height: 80vh;
+    border-radius: 15px 0 0 15px;
 }
 
-#log-form input:focus {
-    box-shadow: 0 0 10px 0 #006238;
-    outline: none;
-    border: none;
+#login-title {
+    color: #006238;
+    font-size: xx-large;
+    text-align: center;
+    text-decoration-line: underline;
 }
 
-#right-div #log-form label {
-    font-weight: 500;
-    margin-top: 20px;
+.login-right-div {
+    width: 35vw;
+    height: 80vh;
+}
+
+#login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#login-form label {
+    padding: 10px;
+    margin-left: 50px;
+    font-size: large;
+    color: seagreen;
+}
+
+#login-form input {
+    padding: 15px;
+    margin: 0 60px 20px 60px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    background-color: floralwhite;
+}
+
+.login-form-btn {
+    padding: 8px;
+    margin: 20px 190px;
+    width: 100px;
+    border-radius: 5px;
+    font-size: medium;
+    background-color: crimson;
+    border: 1px solid crimson;
+    color: white;
+    justify-content: center;
+}
+
+.login-form-btn:hover {
+    cursor: pointer;
+    background-color: #006238;
+    border: 1px solid #006238;
+    font-weight: bold;
 }
 
 #navigate-section {
-    margin: 5px 5px 5px 280px;
+    padding: 50px 0 0 110px;
+    font-size: 18px;
 }
 
 .form-btn {
-    margin: 36px 0 0 36px;
-    height: 28px;
-    width: 70px;
-    border-radius: 5px;
+    color: seagreen;
+    border: none;
+    background-color: floralwhite;
     font-size: medium;
-    color: lightgray;
-    background-color: #006238;
-    border-color: #006238;
-    font-family: "Rubik", sans-serif;
-    padding: 0;
 }
 
-#login-footer {
-    font-family: "Rubik", sans-serif;
-    text-align: center;
-    color: #F6F6F6;
-    background-color: #006238;
-    height: 4vh;
-    padding-top: 8px;
+.form-btn:hover {
+    cursor: pointer;
+    color: #006238;
+    text-decoration-line: underline;
 }

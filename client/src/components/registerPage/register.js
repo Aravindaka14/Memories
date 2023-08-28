@@ -2,64 +2,52 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "./register.css";
+import './register.css'
 
 const Register = () => {
     const navigate = useNavigate();
-    const [signUpState, setSignUpState] = useState({})
+    let [registerState, setRegisterState] = useState({})
 
-    const sendSignUpInput = async (e) => {
+    const sendRegisterInput = async (e) => {
         e.preventDefault()
-        // console.log(signUpState)
         axios({
             url: "http://localhost:3005/register",
             method: "POST",
-            headers: {
-                // header content comes here
-            },
-            data: signUpState
+            data: registerState
         }).then((res) => {
-            // console.log(res)
-            navigate("/")
+            navigate('/')
         }).catch((err) => {
             console.log(err)
         })
     }
-    const naviLogin = () => {
+    const handleLogin = () => {
         navigate("/")
     }
     return (
-        <div>
-            <h1 id="register-h1">
-                Register page
-            </h1>
+        <div id="pageContainer">
             <br></br>
-            <div id="div-container">
-                <div id="left-div">
-                    <img src="photo3.webp" alt="register" />
-                </div>
-                <div id="right-div">
-                    <form id="reg-form" onSubmit={sendSignUpInput}>
-                        <label>Name</label>
-                        <input type="text" placeholder="name..." onChange={(e) => { setSignUpState({ ...signUpState, name: e.target.value }) }} required={true}></input>
-                        <label>Email</label>
-                        <input type="email" placeholder="email..." onChange={(e) => { setSignUpState({ ...signUpState, email: e.target.value }) }} required={true}></input>
-                        <label>Password</label>
-                        <input type="password" placeholder="********" onChange={(e) => { setSignUpState({ ...signUpState, password: e.target.value }) }} required={true}></input>
+            <div id="innerContainerReg">
+                <img src="bg-01.jpg" alt='coverPhoto' />
+                <div className="register-right-div">
+                    <h3 id='register-title'>Register Page</h3>
+                    <form id="register-form" onSubmit={sendRegisterInput}>
+                        <label>Nick name:</label>
+                        <input type="text" placeholder="name..." onChange={(e) => { setRegisterState({ ...registerState, name: e.target.value }) }} required={true}></input>
+                        <label >Your Email:</label>
+                        <input type="email" placeholder="email..." onChange={(e) => { setRegisterState({ ...registerState, email: e.target.value }) }} required={true}></input>
+                        <label>Password:</label>
+                        <input type="password" placeholder="password..." onChange={(e) => { setRegisterState({ ...registerState, password: e.target.value }) }} required={true}></input>
                         <label>Phone no.</label>
-                        <input type="number" placeholder="phone no...." onChange={(e) => { setSignUpState({ ...signUpState, phone: e.target.value }) }}></input>
-                        <button className="form-btn2" type="submit">Submit</button>
+                        <input type="number" placeholder="phone no...." onChange={(e) => { setRegisterState({ ...registerState, phone: e.target.value }) }}></input>
+                        <button className="login-form-btn" type="submit">Submit</button>
                     </form>
-                    <div id="navigate-section">
-                        <h3>Don't have an account <button className="form-btn" onClick={() => { naviLogin() }}>Login</button></h3>
+                    <div id="navigate-section-reg">
+                        <p>Already have an account: <button className="form-btn" onClick={() => { handleLogin() }}>Login</button></p>
                     </div>
                 </div>
             </div>
-            <footer id="register-footer">
-                &copy; 2023 - All Rights Reserved.
-            </footer>
         </div>
     )
-}
+};
 
 export default Register;

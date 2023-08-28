@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "./login.css";
+import './login.css'
 
 const Login = () => {
     const navigate = useNavigate();
@@ -25,38 +25,30 @@ const Login = () => {
             console.log(err)
         })
     }
-    const naviSignUp = () => {
+    const handleRegister = () => {
         navigate("/register")
     }
     return (
-        <div>
-            <h1 id="login-h1">
-                Login page
-            </h1>
+        <div id="pageContainer">
             <br></br>
-            <div id="div-container">
-                <div id="left-div">
-                    <img src="photo3.webp" alt="login" />
-                </div>
-                <div id="right-div">
-                    <form id="log-form" onSubmit={sendLoginInput}>
-                        <label >Email</label>
+            <div id="innerContainer">
+                <img src="bg-01.jpg" alt='coverPhoto' />
+                <div className="login-right-div">
+                    <h3 id='login-title'>Login Page</h3>
+                    <form id="login-form" onSubmit={sendLoginInput}>
+                        <label >Your Email:</label>
                         <input type="email" placeholder="email..." onChange={(e) => { setLoginState({ ...loginState, email: e.target.value }) }} required={true}></input>
-                        <label>Password</label>
+                        <label>Password:</label>
                         <input type="password" placeholder="password..." onChange={(e) => { setLoginState({ ...loginState, password: e.target.value }) }} required={true}></input>
-                        <button className="form-btn2" type="submit">Submit</button>
+                        <button className="login-form-btn" type="submit">Submit</button>
                     </form>
                     <div id="navigate-section">
-                        <h3>Don't have an account <button className="form-btn" onClick={() => { naviSignUp() }}>Register</button></h3>
-
+                        <p>Don't have an account: <button className="form-btn" onClick={() => { handleRegister() }}>Register</button></p>
                     </div>
                 </div>
             </div>
-            <footer id="login-footer">
-                &copy; 2023 - All Rights Reserved.
-            </footer>
         </div>
     )
-}
+};
 
 export default Login;
