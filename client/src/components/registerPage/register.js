@@ -12,7 +12,8 @@ const Register = () => {
     const sendRegisterInput = async (e) => {
         e.preventDefault()
         axios({
-            url: "http://localhost:3005/register",
+            // url: "http://localhost:3005/register",
+            url: "https://memories-cwyy.onrender.com/register",
             method: "POST",
             data: registerState
         }).then((res) => {

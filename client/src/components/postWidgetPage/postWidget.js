@@ -10,7 +10,8 @@ const PostWidget = () => {
     const [post, setPost] = useState({})
     const handleData = async (e) => {
         e.preventDefault()
-        await axios({ method: "POST", url: "http://localhost:3005/postwidget", data: post }).catch((err) => {
+        // "http://localhost:3005/postwidget"
+        await axios({ method: "POST", url: "https://memories-cwyy.onrender.com/postwidget", data: post }).catch((err) => {
             console.log(err)
         }).finally(() => {
             navigate("/home")

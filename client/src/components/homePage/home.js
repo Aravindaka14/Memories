@@ -8,7 +8,8 @@ const Home = () => {
     const [posts, setPosts] = useState([])
     const [update, setUpdate] = useState(false)
     useEffect(() => {
-        axios.get("http://localhost:3005/home").then((data) => {
+        // "http://localhost:3005/home"
+        axios.get("https://memories-cwyy.onrender.com/home").then((data) => {
             setPosts(data.data.reverse())
         }).catch((err) => {
             console.log(err)
@@ -17,7 +18,8 @@ const Home = () => {
 
     const likeHandler = (post) => {
         const id = post._id
-        axios({ url: "http://localhost:3005/home/update", method: "PUT", data: { id: id } }).then((post) => {
+        // "http://localhost:3005/home/update"
+        axios({ url: "https://memories-cwyy.onrender.com/home/update", method: "PUT", data: { id: id } }).then((post) => {
             setUpdate(!update)
 
         }).catch((err) => {
