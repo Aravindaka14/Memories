@@ -12,7 +12,7 @@ router.post("/login", (req, res) => {
         if (userdata.length) {
             bcrypt.compare(req.body.password, userdata[0].password).then((val) => {
                 if (val) {
-                    res.status(200).send(val)
+                    res.status(200).send(userdata)
                 } else {
                     res.status(400).send("Invalid Password")
                 }
