@@ -18,6 +18,7 @@ const Login = () => {
             method: "POST",
             data: { email: loginState.email, password: loginState.password }
         }).then((response) => {
+            localStorage.setItem("userName", response.data.name)
             navigate('/home')
         }).catch((err) => {
             // console.log(err.response.data)

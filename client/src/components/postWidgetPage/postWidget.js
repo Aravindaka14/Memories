@@ -8,6 +8,7 @@ import FileBase64 from "react-file-base64";
 const PostWidget = () => {
     const navigate = useNavigate()
     const [post, setPost] = useState({})
+    const name = localStorage.getItem("userName")
     const handleData = async (e) => {
         e.preventDefault()
         // "http://localhost:3005/postwidget"
@@ -21,6 +22,7 @@ const PostWidget = () => {
         navigate(`/${path}`)
     }
     const logout = () => {
+        localStorage.removeItem('userName')
         navigate('/')
     }
     return (
@@ -29,7 +31,7 @@ const PostWidget = () => {
                 <i className="fa fa-instagram"></i>
                 <span>Memories</span>
                 <select onChange={() => logout()}>
-                    <option>Username</option>
+                    <option>{name}</option>
                     <option><button >Logout</button></option>
                 </select>
                 <button className="camera" onClick={() => naviForm("postWidget")}><i className="fa fa-camera"></i></button>

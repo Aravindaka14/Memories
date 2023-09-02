@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 const Home = () => {
     const [posts, setPosts] = useState([])
     const [update, setUpdate] = useState(false)
+    const name = localStorage.getItem("userName")
     useEffect(() => {
         // "http://localhost:3005/home"
         axios.get("https://memories-cwyy.onrender.com/home").then((data) => {
@@ -32,6 +33,7 @@ const Home = () => {
         navigate(`/${path}`)
     }
     const logout = () => {
+        localStorage.removeItem('userName')
         navigate("/")
     }
     return (
@@ -40,7 +42,7 @@ const Home = () => {
                 <i className="fa fa-instagram"></i>
                 <span>Memories</span>
                 <select onChange={() => logout()}>
-                    <option>Username</option>
+                    <option>{name}</option>
                     <option >Logout</option>
                 </select>
                 <button className="camera" onClick={() => navi("home")}><i className="fa fa-home"></i></button>
