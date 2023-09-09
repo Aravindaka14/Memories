@@ -11,14 +11,14 @@ const PostWidget = () => {
     const name = localStorage.getItem("userName")
     const handleData = async (e) => {
         e.preventDefault()
-        // "http://localhost:3005/postwidget"
-        await axios({ method: "POST", url: "https://memories-cwyy.onrender.com/postwidget", data: post }).catch((err) => {
+        //"https://memories-cwyy.onrender.com/postwidget" 
+        await axios({ method: "POST", url: "http://localhost:3005/postwidget", data: post }).catch((err) => {
             console.log(err)
         }).finally(() => {
             navigate("/home")
         })
     }
-    const naviForm = (path) => {
+    const handlePath = (path) => {
         navigate(`/${path}`)
     }
     const logout = () => {
@@ -32,10 +32,10 @@ const PostWidget = () => {
                 <span>Memories</span>
                 <select onChange={() => logout()}>
                     <option>{name}</option>
-                    <option><button >Logout</button></option>
+                    <option>Logout</option>
                 </select>
-                <button className="camera" onClick={() => naviForm("postWidget")}><i className="fa fa-camera"></i></button>
-                <button className="camera" onClick={() => naviForm("home")}><i className="fa fa-home"></i></button>
+                <button className="camera" onClick={() => handlePath("postWidget")}><i className="fa fa-camera"></i></button>
+                <button className="camera" onClick={() => handlePath("home")}><i className="fa fa-home"></i></button>
             </header>
             <form id="post-form" onSubmit={handleData} >
                 <h3 id="post-form-title">Share your post here...</h3>

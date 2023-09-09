@@ -3,7 +3,6 @@ import mongoose from "mongoose";
 import cors from "cors";
 import multer from "multer";
 import dotenv from "dotenv";
-import Jwt from "jsonwebtoken";
 import postRoutes from "./routes/postWidget.js";
 import postsRoutes from "./routes/home.js";
 import registerRoutes from "./routes/register.js";
@@ -16,20 +15,6 @@ app.use(express.urlencoded({ extended: false }))
 app.use(cors())
 app.use(mul.array())
 dotenv.config();
-
-// const unProtectedRoutes = ["/", "signup"];
-// app.use((req, res, next) => {
-//     unProtectedRoutes.forEach((route) => {
-//         if (req.url.includes(route)) {
-//             next();
-//         } else {
-//             const authorization = Jwt.verify(req.headers.authorization, process.env.secretKey)
-//         }
-//     })
-
-//     // next();
-//     // console.log(req.headers, "from middleware")
-// })
 
 //middleware
 app.use("/", postRoutes);

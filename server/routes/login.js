@@ -1,7 +1,6 @@
 import express from "express";
 import User from "../modals/User.js";
 import bcrypt from "bcryptjs";
-import Jwt from "jsonwebtoken";
 // import crypto from "crypto";
 
 const router = express.Router();

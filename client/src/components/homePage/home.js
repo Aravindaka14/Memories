@@ -7,29 +7,29 @@ import { useNavigate } from "react-router-dom";
 const Home = () => {
     const [posts, setPosts] = useState([])
     const [update, setUpdate] = useState(false)
+    const navigate = useNavigate()
     const name = localStorage.getItem("userName")
+
     useEffect(() => {
-        // "http://localhost:3005/home"
-        axios.get("https://memories-cwyy.onrender.com/home").then((data) => {
+        //"https://memories-cwyy.onrender.com/home" 
+        axios.get("http://localhost:3005/home").then((data) => {
             setPosts(data.data.reverse())
         }).catch((err) => {
             console.log(err)
         })
-    }, [update])
+    }, [posts])
 
     const likeHandler = (post) => {
         const id = post._id
-        // "http://localhost:3005/home/update"
-        axios({ url: "https://memories-cwyy.onrender.com/home/update", method: "PUT", data: { id: id } }).then((post) => {
+        //"https://memories-cwyy.onrender.com/home/update" 
+        axios({ url: "http://localhost:3005/home/update", method: "PUT", data: { id: id } }).then((post) => {
             setUpdate(!update)
-
         }).catch((err) => {
             console.log(err)
         })
     }
-    const navigate = useNavigate()
 
-    const navi = (path) => {
+    const handlePath = (path) => {
         navigate(`/${path}`)
     }
     const logout = () => {
@@ -43,10 +43,10 @@ const Home = () => {
                 <span>Memories</span>
                 <select onChange={() => logout()}>
                     <option>{name}</option>
-                    <option >Logout</option>
+                    <option>Logout</option>
                 </select>
-                <button className="camera" onClick={() => navi("home")}><i className="fa fa-home"></i></button>
-                <button className="camera" onClick={() => navi("postWidget")}><i className="fa fa-camera"></i></button>
+                <button className="camera" onClick={() => handlePath("home")}><i className="fa fa-home"></i></button>
+                <button className="camera" onClick={() => handlePath("postWidget")}><i className="fa fa-camera"></i></button>
             </header>
             <main>
                 {
