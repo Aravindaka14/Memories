@@ -109,6 +109,7 @@ main {
     height: 465px;
     padding: 0 15px;
     border-radius: 20px;
+    object-fit: contain;
 }
 
 .heart-share {
@@ -140,7 +141,7 @@ main {
     color: #000000;
 }
 
-.post-btn {
+.postBtn {
     background-color: white;
     border: none;
     color: red;
@@ -150,11 +151,11 @@ main {
     display: inline-block;
 }
 
-.post-btn:hover {
+.postBtn:hover {
     color: darkgreen;
 }
 
-.post-btn2 {
+.postBtn2 {
     background-color: white;
     border: none;
     color: none;
@@ -164,7 +165,7 @@ main {
     display: inline-block;
 }
 
-#home-footer {
+#homeFooter {
     text-align: center;
     color: #F6F6F6;
     background-color: #006238;
@@ -172,5 +173,5 @@ main {
     height: 4vh;
     bottom: 0px;
     font-family: "Rubik", sans-serif;
-    padding-top: 8px;
+    padding-top: 0.5rem;
 }

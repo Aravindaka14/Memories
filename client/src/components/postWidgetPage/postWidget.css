@@ -1,62 +1,65 @@
 .formDiv {
+    display: flex;
+    flex-direction: column;
     background-color: #F6F6F6;
     height: 100vh;
-    font-family: "Rubik", sans-serif;
+}
+#postWidHeader{
+    height:10vh;
 }
 
-#post-form {
-    display: grid;
-    top: 229px;
-    left: 860px;
-    width: 480px;
-    height: 550px;
-    border-radius: 16px;
-    margin: 50px 0 0 33%;
+#postWidMain{
+    height:85vh;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+
+#postForm {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    justify-content: center; */
+    border-radius: 1rem;
     background-color: white;
-    font-family: "Rubik", sans-serif;
     box-shadow: 0px 2px 6px 2px lightgrey;
 }
 
-#post-form-title {
-    text-align: center;
+#postFormTitle {
+    /* text-align: center; */
     color: #006238;
-    font-size: x-large;
+    font-size: 1.5rem;
     border-bottom: 1px solid #006238;
 }
 
-.post-form-input {
-    height: 35px;
-    width: 220px;
+.postFormInput {
+    /* height: 35px;
+    width: 220px; */
     margin: 22px 0 0 70px;
-    padding-right: 100px;
+
+    /* padding-right: 100px; */
     border-radius: 5px;
-    font-size: medium;
-    padding-left: 20px;
-    background-color: #F6F6F6;
-    border-color: lightgray;
-    font-family: "Rubik", sans-serif;
+    font-size: 0.8rem;
+    /* padding-left: 20px; */
 }
 
 #filebase64 {
     color: #006238;
-    margin: 22px 0 0 150px;
-    font-size: large;
+    font-size: 1rem;
 }
 
-.post-form-btn {
-    margin: 22px 0 0 200px;
-    height: 28px;
-    width: 70px;
+.postFormBtn {
+    padding:0.4rem;
+    width: 25%;
     border: 1px solid #006238;
     border-radius: 5px;
-    font-size: medium;
+    font-size: 1rem;
     color: lightgray;
     background-color: #006238;
-    font-family: "Rubik", sans-serif;
 }
 
 
-.post-form-btn:hover {
+.postFormBtn:hover {
     color: white;
     background-color: crimson;
     border-color: crimson;
@@ -64,13 +67,10 @@
     cursor: pointer;
 }
 
-#form-footer {
+#formFooter {
     text-align: center;
     color: #F6F6F6;
     background-color: #006238;
     height: 4vh;
-    position: relative;
-    width: 100%;
-    top: 28px;
     padding-top: 8px;
 }

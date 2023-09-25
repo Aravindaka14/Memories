@@ -32,7 +32,7 @@ mongoose.connect(mongoDB).then(() => {
 })
 
 //server
-let port = process.env.PORT || 3005
+let port = process.env.PORT || 3006
 app.listen(port, (err) => {
     if (err) {
         console.log(err)
