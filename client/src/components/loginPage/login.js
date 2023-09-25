@@ -34,17 +34,17 @@ const Login = () => {
             <br></br>
             <div id="innerContainer">
                 <img src="bg-01.jpg" alt='coverPhoto' />
-                <div className="login-right-div">
-                    <h3 id='login-title'>Login Page</h3>
-                    <form id="login-form" onSubmit={sendLoginInput}>
+                <div className="loginRightDiv">
+                    <h3 id='loginTitle'>Login Page</h3>
+                    <form id="loginForm" onSubmit={sendLoginInput}>
                         <label htmlFor='loginEmail'>Your Email:</label>
                         <input id='loginEmail' type="email" placeholder="email..." onChange={(e) => { setLoginState({ ...loginState, email: e.target.value }) }} required={true}></input>
                         <label htmlFor='loginPassword'>Password:</label>
                         <input id="loginPassword" type="password" placeholder="password..." onChange={(e) => { setLoginState({ ...loginState, password: e.target.value }) }} required={true}></input>
-                        <button className="login-form-btn" type="submit">Submit</button>
+                        <button className="loginFormBtn" type="submit">Submit</button>
                     </form>
-                    <div id="navigate-section">
-                        <p>Don't have an account: <button className="form-btn" onClick={() => { handlePath('register') }}>Register</button></p>
+                    <div id="navSectionLog">
+                        <p>Don't have an account: <button className="formBtn" onClick={() => { handlePath('register') }}>Register</button></p>
                     </div>
                 </div>
             </div>

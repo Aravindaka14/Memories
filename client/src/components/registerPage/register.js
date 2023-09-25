@@ -33,9 +33,9 @@ const Register = () => {
             <br></br>
             <div id="innerContainerReg">
                 <img src="bg-01.jpg" alt='coverPhoto' />
-                <div className="register-right-div">
-                    <h3 id='register-title'>Register Page</h3>
-                    <form id="register-form" onSubmit={sendRegisterInput}>
+                <div className="registerRightDiv">
+                    <h3 id='registerTitle'>Register Page</h3>
+                    <form id="registerForm" onSubmit={sendRegisterInput}>
                         <label htmlFor='regName'>Nick name:</label>
                         <input id='regName' type="text" placeholder="name..." onChange={(e) => { setRegisterState({ ...registerState, name: e.target.value }) }} required={true}></input>
                         <label htmlFor='regEmail'>Your Email:</label>
@@ -43,11 +43,11 @@ const Register = () => {
                         <label htmlFor='regPassword'>Password:</label>
                         <input id='regPassword' type="password" placeholder="password..." onChange={(e) => { setRegisterState({ ...registerState, password: e.target.value }) }} required={true}></input>
                         <label htmlFor='regPhone'>Phone no.</label>
-                        <input id='regPhone' type="number" placeholder="phone no...." onChange={(e) => { setRegisterState({ ...registerState, phone: e.target.value }) }}></input>
-                        <button className="login-form-btn" type="submit">Submit</button>
+                        <input id='regPhone' type="tel" placeholder="phone no...." onChange={(e) => { setRegisterState({ ...registerState, phone: e.target.value }) }}></input>
+                        <button className="loginFormBtn" type="submit">Submit</button>
                     </form>
-                    <div id="navigate-section-reg">
-                        <p>Already have an account: <button className="form-btn" onClick={() => { handlePath("") }}>Login</button></p>
+                    <div id="navSectionReg">
+                        <p>Already have an account: <button className="formBtn" onClick={() => { handlePath("") }}>Login</button></p>
                     </div>
                 </div>
             </div>

@@ -60,8 +60,8 @@ const Home = () => {
                                     <i className="fa fa-bookmark"></i>
                                     <p className="userLoc">{post.location}</p>
                                     <img className="postImage" src={post.image.base64} alt="" />
-                                    <button className="post-btn" onClick={() => { likeHandler(post) }}><i className="fa fa-heart"></i></button><span className="postLikes">{post.likes}</span>
-                                    <button className="post-btn2"><i className="fa fa-share-alt"></i></button>
+                                    <button className="postBtn" onClick={() => { likeHandler(post) }}><i className="fa fa-heart"></i></button><span className="postLikes">{post.likes}</span>
+                                    <button className="postBtn2"><i className="fa fa-share-alt"></i></button>
                                     <p className="postDate">{post.date}</p>
                                     {/* <p className="postLikes">{post.likes} Likes</p> */}
                                     <p className="postDes">{post.description}</p>
@@ -69,7 +69,7 @@ const Home = () => {
                             )
                         })}
             </main >
-            <footer id="home-footer">
+            <footer id="homeFooter">
                 &copy; 2023 - All Rights Reserved.
             </footer>
         </div >

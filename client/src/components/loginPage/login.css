@@ -1,105 +1,108 @@
 #pageContainer {
-    width: 100vw;
-    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #f6f6f6;
 }
 
 #innerContainer {
     display: flex;
     width: 70vw;
-    height: 80vh;
+    min-height: 80vh;
     box-shadow: 2px 2px 6px 2px lightgrey;
-    border-radius: 15px;
+    border-radius: 1rem;
     background-color: floralwhite;
-    margin: 8vh 15vw;
 }
 
 #innerContainer img {
     width: 35vw;
-    height: 80vh;
-    border-radius: 15px 0 0 15px;
+    border-radius: 1rem 0 0 1rem;
+    object-fit:cover;
 }
 
-#login-title {
+#loginTitle {
     color: #006238;
-    font-size: xx-large;
+    font-size: 1.5rem;
     text-align: center;
     text-decoration-line: underline;
+    margin:4rem 0 4rem 0;
 }
 
-.login-right-div {
+.loginRightDiv {
     width: 35vw;
-    height: 80vh;
+    min-height: 80vh;
 }
 
-#login-form {
+#loginForm {
     display: flex;
     flex-direction: column;
 }
 
-#login-form label {
-    padding: 10px;
-    margin-left: 50px;
-    font-size: large;
+#loginForm label {
+    padding:0.5rem 1rem;
+    margin-left: 3rem;
+    font-size: 1rem;
     color: seagreen;
 }
 
-#login-form input {
-    padding: 15px;
-    margin: 0 60px 20px 60px;
+#loginForm input {
+    padding: 1rem;
+    margin: 0 4rem 2rem 4rem;
     border-radius: 5px;
     border: 1px solid grey;
     background-color: floralwhite;
 }
 
-#login-form input:focus {
+#loginForm input:focus {
     border: none;
     outline: #006238 solid 2px;
 }
 
-.login-form-btn {
-    padding: 8px;
-    margin: 20px 190px;
-    width: 100px;
+.loginFormBtn {
+    padding: 0.5rem;
+    margin:0 40% 1rem 40%;
+    width: 5rem;
     border-radius: 5px;
-    font-size: medium;
+    font-size: 1rem;
     background-color: crimson;
     border: 1px solid crimson;
     color: white;
     justify-content: center;
 }
 
-.login-form-btn:hover {
+.loginFormBtn:hover {
     cursor: pointer;
     background-color: #006238;
     border: 1px solid #006238;
     font-weight: bold;
 }
 
-#navigate-section {
-    padding: 50px 0 0 110px;
-    font-size: 18px;
+#navSectionLog {
+    margin-left:3rem;
+    padding:1rem;
 }
 
-.form-btn {
+.formBtn {
     color: seagreen;
     border: none;
     background-color: floralwhite;
     font-size: medium;
 }
 
-.form-btn:hover {
+.formBtn:hover {
     cursor: pointer;
     color: #006238;
     text-decoration-line: underline;
 }
 
 .errContainer {
-    position: fixed;
+    /* position: fixed;
     left: 0;
     top: 0;
     right: 0;
-    bottom: 0;
+    bottom: 0; */
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
