@@ -1,142 +1,94 @@
-.postDiv {
-    width: inherit;
-    height: inherit;
+#pageContainer {
+    max-width: 100vw;
+    height: auto;
     background-color: #F6F6F6;
 }
 
-header {
-    width: inherit;
-    height: 10vh;
-    color: #006238;
-    border-bottom: solid 2px;
+#homeWidHeader {
+    display: flex;
+    min-width: 100vw;
+    height: 8vh;
+    justify-content: space-between;
+    border-bottom: solid 2px #006238;
 }
 
-.fa-instagram {
-    top: 50px;
-    left: 200px;
-    width: 36px;
-    height: 48px;
-    font-size: 36px;
-    padding: 14px 2px 5px 100px;
-    color: crimson;
-}
-
-header span {
-    position: absolute;
-    font: normal normal normal 30px/38px "Rubik", sans-serif;
-    letter-spacing: 0px;
-    color: crimson;
-    display: inline;
-    margin: 15px 0 0 0;
-    font-weight: 600;
-}
-
-.camera {
+#homeWidMain {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #F6F6F6;
-    border: none;
-    float: right;
-    width: 54px;
-    height: 58px;
-    margin: 10px 15px 0 0;
-    font-size: 32px;
-    cursor: pointer;
-}
-
-select {
-    display: inline;
-    float: right;
-    margin: 22px 60px 0 0;
-    padding: 6px;
-    font-size: 16px;
-    border-radius: 8px;
-    border: none;
-    box-shadow: 2px 2px 4px 1px lightgrey;
-    cursor: pointer;
-}
-
-select:focus {
-    outline: none;
-}
-
-main {
-    width: inherit;
-    background-color: #F6F6F6;
-    min-height: 82vh;
+    min-height: 86.5vh;
 }
 
 .contentDiv {
-    border-radius: 10px;
-    margin: 5% 30%;
-    width: 530px;
-    height: 620px;
+    border-radius: 1rem;
+    margin: 5% 25%;
+    width: 35%;
     text-align: left;
     background-color: white;
     box-shadow: 4px 4px 4px 1px lightgrey;
 }
 
 .fa-user-circle {
-    font-size: 32px;
-    padding: 15px 0 0 20px;
+    font-size: 2rem;
+    padding: 1rem 0 0 1.5rem;
 }
 
 .userName {
     display: inline-block;
-    padding: 0 0 5px 5px;
-    margin: 0 0 0 0;
-    font-size: 20px;
+    padding: 0 0 0.25rem 0.25rem;
+    margin: 0;
+    font-size: 1.25rem;
     font-weight: 500;
-    font-family: "Rubik", sans-serif;
 }
 
 .fa-bookmark {
-    font-size: 20px;
+    font-size: 1.25rem;
     float: right;
-    width: 20px;
-    height: 20px;
-    padding: 20px 15px 5px 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    padding: 1.25rem 1rem 0.25rem 0;
 }
 
 .userLoc {
     color: #707070;
     margin: 0;
-    padding: 0 0 5px 58px;
-    font-family: "Rubik", sans-serif;
-    font-size: 14px;
+    padding: 0 0 0.25rem 3.75rem;
+    font-size: 0.85rem;
 }
 
 .postImage {
     width: 500px;
     height: 465px;
-    padding: 0 15px;
-    border-radius: 20px;
+    padding: 0 1rem;
+    border-radius: 1.25rem;
     object-fit: contain;
 }
 
 .heart-share {
-    width: 28px;
-    height: 28px;
-    padding-top: 10px;
-    margin: 0px 0 5px 25px;
+    width: 2rem;
+    height: 2rem;
+    padding-top: 0.5rem;
+    margin: 0 0 0.25rem 1.5rem;
     display: inline-block;
 }
 
 .postDate {
     float: right;
-    margin: 10px 25px 5px 0;
-    font-family: "Rubik", sans-serif;
+    margin: 0.75rem 1.5rem 0.25rem 0;
     font-weight: 500;
-    height: 10px;
 }
 
 .postLikes {
-    margin: 2px 0 5px 5px;
-    font-family: "Rubik", sans-serif;
-    font-size: larger;
+    margin: 0 0 0.25rem 0.25rem;
+    font-size: 1rem;
 }
 
 .postDes {
-    margin: 5px 0 5px 25px;
-    font: normal normal normal 16px/34px "Rubik", sans-serif;
+    margin: 0.5rem 0 1rem 1.5rem;
+    font: normal normal normal 1rem/2rem;
     letter-spacing: 0px;
     color: #000000;
 }
@@ -145,8 +97,8 @@ main {
     background-color: white;
     border: none;
     color: red;
-    padding: 2px 0 0 18px;
-    font-size: 28px;
+    padding: 0 0 0 1rem;
+    font-size: 1.5rem;
     cursor: pointer;
     display: inline-block;
 }
@@ -159,8 +111,8 @@ main {
     background-color: white;
     border: none;
     color: none;
-    padding: 2px 0 0 18px;
-    font-size: 28px;
+    padding: 0 0 0 1rem;
+    font-size: 1.5rem;
     cursor: pointer;
     display: inline-block;
 }
@@ -169,9 +121,8 @@ main {
     text-align: center;
     color: #F6F6F6;
     background-color: #006238;
-    width: 100%;
+    width: 100vw;
+    max-width: 100vw;
     height: 4vh;
-    bottom: 0px;
-    font-family: "Rubik", sans-serif;
     padding-top: 0.5rem;
 }

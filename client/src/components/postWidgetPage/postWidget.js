@@ -11,8 +11,9 @@ const PostWidget = () => {
     const name = localStorage.getItem("userName")
     const handleData = async (e) => {
         e.preventDefault()
-        //"https://memories-cwyy.onrender.com/postwidget" 
-        await axios({ method: "POST", url: "http://localhost:3005/postwidget", data: post }).catch((err) => {
+        // "http://localhost:3005/postwidget"
+
+        await axios({ method: "POST", url: "https://memories-cwyy.onrender.com/postwidget", data: post }).catch((err) => {
             console.log(err)
         }).finally(() => {
             navigate("/home")
@@ -26,16 +27,20 @@ const PostWidget = () => {
         navigate('/')
     }
     return (
-        <div className="formDiv">
+        <div id="pageContainer">
             <header id="postWidHeader">
-                <i className="fa fa-instagram"></i>
-                <span>Memories</span>
-                <select onChange={() => logout()}>
-                    <option>{name}</option>
-                    <option>Logout</option>
-                </select>
-                <button className="camera" onClick={() => handlePath("postWidget")}><i className="fa fa-camera"></i></button>
-                <button className="camera" onClick={() => handlePath("home")}><i className="fa fa-home"></i></button>
+                <div className="logo">
+                    <i className="fa fa-instagram"></i>
+                    <span>Memories</span>
+                </div>
+                <div className='headerIcons'>
+                    <button className="camera" onClick={() => handlePath("home")}><i className="fa fa-home"></i></button>
+                    <button className="camera" onClick={() => handlePath("postWidget")}><i className="fa fa-camera"></i></button>
+                    <select onChange={() => logout()}>
+                        <option>{name}</option>
+                        <option>Logout</option>
+                    </select>
+                </div>
             </header>
             <main id="postWidMain">
                 <form id="postForm" onSubmit={handleData} >
