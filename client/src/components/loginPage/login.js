@@ -13,8 +13,8 @@ const Login = () => {
         e.preventDefault()
         // console.log(loginState)
         axios({
-            url: "http://localhost:3005/login",
-            // url: "https://memories-cwyy.onrender.com/login",
+            // url: "http://localhost:3005/login",
+            url: "https://memories-cwyy.onrender.com/login",
             method: "POST",
             data: { email: loginState.email, password: loginState.password }
         }).then((response) => {
@@ -51,5 +51,4 @@ const Login = () => {
         </div>
     )
 };
-
 export default Login;
