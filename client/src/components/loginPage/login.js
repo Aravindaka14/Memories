@@ -13,13 +13,13 @@ const Login = () => {
         e.preventDefault()
         // console.log(loginState)
         axios({
-            // url: "http://localhost:3005/login",
-            url: "https://memories-cwyy.onrender.com/login",
+            url: "http://localhost:3005/login",
+            // url: "https://memories-cwyy.onrender.com/login",
             method: "POST",
             data: { email: loginState.email, password: loginState.password }
         }).then((response) => {
             localStorage.setItem("userName", response.data[0].name)
-            navigate('home')
+            navigate('/home')
         }).catch((err) => {
             // console.log(err.response.data)
             setUserErr(err.response.data)
