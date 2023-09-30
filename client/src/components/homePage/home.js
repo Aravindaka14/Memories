@@ -11,8 +11,8 @@ const Home = () => {
     const name = localStorage.getItem("userName")
 
     useEffect(() => {
-        axios.get("http://localhost:3005/home").then((data) => {
-            // axios.get("https://memories-cwyy.onrender.com/home").then((data) => {
+        // axios.get("http://localhost:3005/home").then((data) => {
+        axios.get("https://memories-cwyy.onrender.com/home").then((data) => {
             setPosts(data.data.reverse())
         }).catch((err) => {
             console.log(err)
