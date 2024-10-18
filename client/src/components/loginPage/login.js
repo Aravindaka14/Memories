@@ -29,9 +29,9 @@ const Login = () => {
         navigate(`/${path}`)
     }
     return (
-        <div id="pageContainer">
-            {userErr !== "" ? <div className="errContainer"> <div className="errBox"> <h1>{userErr}</h1><button onClick={() => { setUserErr('') }}>Retry</button></div></div> : null}
-            <br></br>
+        <div id="pageContainer" >
+            {userErr !== "" ? <div className="errContainer"> <div className="errBox"> <h2>{userErr}</h2><button onClick={() => { setUserErr('') }}>Retry</button></div></div> : null}
+            {/* <br></br> */}
             <div id="innerContainer">
                 <img src="bg-01.jpg" alt='coverPhoto' />
                 <div className="login-right-div">

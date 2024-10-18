@@ -32,6 +32,14 @@ const Home = () => {
     const handlePath = (path) => {
         navigate(`/${path}`)
     }
+
+    const scrollToTop = ()=>{
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // for a smooth scrolling animation
+          });
+          
+    }  
     const logout = () => {
         localStorage.removeItem('userName')
         navigate("/")
@@ -39,7 +47,7 @@ const Home = () => {
     return (
         <div className="postDiv">
             <header>
-                <i className="fa fa-instagram"></i>
+                <i className="fa fa-instagram" ></i>
                 <span>Memories</span>
                 <select onChange={() => logout()}>
                     <option>{name}</option>
@@ -50,7 +58,8 @@ const Home = () => {
             </header>
             <main>
                 {
-                    posts.length === 0 ? <h2 style={{ textAlign: "center", fontFamily: "Rubik sans-serif" }}>There is no content.</h2> :
+                    posts.length === 0 ? <h2 style={{ textAlign: "center", fontFamily: "Rubik sans-serif" }}><i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+                    <span class="sr-only">Loading...</span>There is no content.</h2> :
                         posts.map((post, i) => {
 
                             return (
@@ -59,7 +68,9 @@ const Home = () => {
                                     <h5 className="userName">{post.name}</h5>
                                     <i className="fa fa-bookmark"></i>
                                     <p className="userLoc">{post.location}</p>
+                                    <div className="imgContainer">
                                     <img className="postImage" src={post.image.base64} alt="" />
+                                    </div>
                                     <button className="post-btn" onClick={() => { likeHandler(post) }}><i className="fa fa-heart"></i></button><span className="postLikes">{post.likes}</span>
                                     <button className="post-btn2"><i className="fa fa-share-alt"></i></button>
                                     <p className="postDate">{post.date}</p>
@@ -68,9 +79,10 @@ const Home = () => {
                                 </div>
                             )
                         })}
+                        <p onClick={()=>{scrollToTop()}}>Scroll To Top</p>
             </main >
             <footer id="home-footer">
-                &copy; 2023 - All Rights Reserved.
+                &copy; 2024 - All Rights Reserved.
             </footer>
         </div >
     )

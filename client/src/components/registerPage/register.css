@@ -4,32 +4,46 @@
     background-color: #f6f6f6;
 }
 
-#innerContainerReg {
+#innerContainerReg { 
     display: flex;
-    width: 70vw;
-    height: 90vh;
+    max-width: 70vw;
+    height: auto;
+    /* height: 90vh; */
     box-shadow: 2px 2px 6px 2px lightgrey;
-    border-radius: 15px;
+    border-radius: 1rem;
     background-color: floralwhite;
-    margin: 3vh 15vw;
+    /* margin: 3vh 15vw; */
+    margin: auto;
 }
 
 #innerContainerReg img {
-    width: 35vw;
-    height: 90vh;
-    border-radius: 15px 0 0 15px;
+    width: auto;
+    max-width: 35vw;
+    /* max-height: 90vh; */
+    height: auto;
+    border-radius: 1rem 0 0 1rem;
+    display: flex;
+    flex-direction: column;
+    object-fit: cover;
 }
 
 #register-title {
     color: #006238;
-    font-size: xx-large;
+    letter-spacing: 0.15rem;
+    font-size: x-large;
     text-align: center;
     text-decoration-line: underline;
 }
 
 .register-right-div {
-    width: 35vw;
-    height: 80vh;
+    /* width: 35vw; */
+    width: auto;
+    min-width: 35vw;
+    /* height: 80vh; */
+    height: auto;
+    max-height: 80vh;
+    padding: 3rem 0;
+    box-sizing: content-box;
 }
 
 #register-form {
@@ -38,16 +52,17 @@
 }
 
 #register-form label {
-    padding: 10px;
-    margin-left: 50px;
-    font-size: large;
+    padding: 0.75rem;
+    margin-left: 3rem;
+    font-size:medium;
     color: seagreen;
 }
 
 #register-form input {
-    padding: 15px;
-    margin: 0 60px 18px 60px;
+    padding: 0.75rem;
+    margin: 0 3.75rem;
     border-radius: 5px;
+    font-size: medium;
     border: 1px solid grey;
     background-color: floralwhite;
 }
@@ -58,15 +73,15 @@
 }
 
 .register-form-btn {
-    padding: 8px;
-    margin: 15px 190px;
-    width: 100px;
+    padding: 0.5rem 1rem;
+    margin: 1rem auto auto auto;
     border-radius: 5px;
     font-size: medium;
     background-color: crimson;
     border: 1px solid crimson;
     color: white;
     justify-content: center;
+    letter-spacing: 0.1rem;
 }
 
 .register-form-btn:hover {
@@ -77,15 +92,15 @@
 }
 
 #navigate-section-reg {
-    padding: 0 0 0 110px;
-    font-size: 18px;
+    margin: auto 4rem;
+    font-size: medium;
 }
 
 .form-btn {
     color: seagreen;
     border: none;
     background-color: floralwhite;
-    font-size: medium;
+    font-size: larger;
 }
 
 .form-btn:hover {

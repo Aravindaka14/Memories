@@ -48,7 +48,7 @@ const PostWidget = () => {
                 <button className="post-form-btn" type="submit">Post</button>
             </form>
             <footer id="form-footer">
-                &copy; 2023 - All Rights Reserved.
+                &copy; 2024 - All Rights Reserved.
             </footer>
         </div>
     )

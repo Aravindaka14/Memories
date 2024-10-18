@@ -31,7 +31,7 @@ const Register = () => {
         <div id="pageContainer">
             {userErr !== "" ? <div className="errContainer"> <div className="errBox"> <h1>{userErr}</h1><button onClick={() => { setUserErr('') }}>Retry</button></div></div> : null}
             <br></br>
-            <div id="innerContainerReg">
+            <div id="innerContainerReg" >
                 <img src="bg-01.jpg" alt='coverPhoto' />
                 <div className="register-right-div">
                     <h3 id='register-title'>Register Page</h3>
@@ -43,8 +43,8 @@ const Register = () => {
                         <label htmlFor='regPassword'>Password:</label>
                         <input id='regPassword' type="password" placeholder="password..." onChange={(e) => { setRegisterState({ ...registerState, password: e.target.value }) }} required={true}></input>
                         <label htmlFor='regPhone'>Phone no.</label>
-                        <input id='regPhone' type="number" placeholder="phone no...." onChange={(e) => { setRegisterState({ ...registerState, phone: e.target.value }) }}></input>
-                        <button className="login-form-btn" type="submit">Submit</button>
+                        <input id='regPhone' type="tel" placeholder="phone no...." pattern="([0-9]{10})" onChange={(e) => { setRegisterState({ ...registerState, phone: e.target.value }) }}></input>
+                        <button className="register-form-btn" type="submit">Submit</button>
                     </form>
                     <div id="navigate-section-reg">
                         <p>Already have an account: <button className="form-btn" onClick={() => { handlePath("") }}>Login</button></p>
