@@ -12,11 +12,11 @@ const app = express()
 const mul = multer();
 app.use(express.json({ limit: '5mb' }))
 app.use(express.urlencoded({ extended: false }))
-app.use(cors())
+// app.use(cors())
 app.use(mul.array())
 dotenv.config();
 app.use(cors({
-    origin:["https://memories-five-mu.vercel.app/","https://memories-5qtkv3smm-aravind-s-projects-17f45aed.vercel.app/","https://memories-git-memoriesmain-aravind-s-projects-17f45aed.vercel.app/"],
+    origin:["https://memories-five-mu.vercel.app/"],
     methods:["GET","POST","PUT"],
     credentials:true
 }));
