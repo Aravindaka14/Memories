@@ -15,6 +15,11 @@ app.use(express.urlencoded({ extended: false }))
 app.use(cors())
 app.use(mul.array())
 dotenv.config();
+app.use(cors({
+    origin:["memories-five-mu.vercel.app"],
+    methods:["GET","POST","PUT"],
+    credentials:true
+}));
 
 //middleware
 app.use("/", postRoutes);
