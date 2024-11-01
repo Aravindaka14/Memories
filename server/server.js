@@ -16,7 +16,7 @@ app.use(cors())
 app.use(mul.array())
 dotenv.config();
 app.use(cors({
-    origin:["memories-five-mu.vercel.app"],
+    origin:["memories-five-mu.vercel.app","https://memories-5qtkv3smm-aravind-s-projects-17f45aed.vercel.app/","https://memories-git-memoriesmain-aravind-s-projects-17f45aed.vercel.app/"],
     methods:["GET","POST","PUT"],
     credentials:true
 }));
