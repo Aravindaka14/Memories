@@ -7,10 +7,11 @@ const Home = () => {
     const [posts, setPosts] = useState([])
     const [update, setUpdate] = useState(false)
 
-
+    // local host - url
+    // http://localhost:3005/home
+    
     useEffect(() => {
-        axios.get("http://localhost:3005/home").then((data) => {
-            // axios.get("https://memories-cwyy.onrender.com/home").then((data) => {
+        axios.get("https://memories-server-sigma.vercel.app/home").then((data) => {
             setPosts(data.data.reverse())
         }).catch((err) => {
             console.log(err)
@@ -20,8 +21,10 @@ const Home = () => {
     const likeHandler = (post) => {
         const id = post._id
 
-        // "https://memories-cwyy.onrender.com/home/update"
-        axios({ url: "http://localhost:3005/home/update", method: "PUT", data: { id: id } }).then((post) => {
+    //local host - url
+    // http://localhost:3005/home/update
+
+        axios({ url: "https://memories-server-sigma.vercel.app/home/update", method: "PUT", data: { id: id } }).then((post) => {
             setUpdate(!update)
         }).catch((err) => {
             console.log(err)
@@ -58,7 +61,6 @@ const Home = () => {
                         )
                     })}
                 <div className="goToTop">
-                    {/* <img className="goToTopImg" onClick={() => { goToTop() }} src="" alt="goToTop2" /> */}
                     <i className="fa fa-caret-square-o-up fa-3x" aria-hidden="true" onClick={() => { goToTop() }}></i>
                 </div>
             </main >

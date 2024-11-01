@@ -11,9 +11,11 @@ const Register = () => {
 
     const sendRegisterInput = async (e) => {
         e.preventDefault()
+
+        // local host - url: "http://localhost:3005/register"
+        
         axios({
-            url: "http://localhost:3005/register",
-            // url: "https://memories-cwyy.onrender.com/register",
+            url: "https://memories-server-sigma.vercel.app/register",
             method: "POST",
             data: registerState
         }).then((res) => {

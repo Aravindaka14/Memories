@@ -11,16 +11,20 @@ const Login = () => {
 
     const sendLoginInput = (e) => {
         e.preventDefault()
+
         // console.log(loginState)
+        //local host - url: "http://localhost:3005/login",
+
         axios({
-            url: "http://localhost:3005/login",
-            // url: "https://memories-cwyy.onrender.com/login",
+            url: "https://memories-server-sigma.vercel.app/login",           
             method: "POST",
             data: { email: loginState.email, password: loginState.password }
         }).then((response) => {
             localStorage.setItem("userName", response.data[0].name)
             navigate('/layout/home')
         }).catch((err) => {
+            
+            //To check response data from the error
             // console.log(err.response.data)
             setUserErr(err.response.data)
         })

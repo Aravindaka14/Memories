@@ -8,13 +8,16 @@ import FileBase64 from "react-file-base64";
 const PostWidget = () => {
     const navigate = useNavigate()
     const [post, setPost] = useState({})
+
+    //To get the name from local storage
     // const name = localStorage.getItem("userName")
+
     const handleData = async (e) => {
         e.preventDefault()
         
-        // "https://memories-cwyy.onrender.com/postwidget"
+    // local host  -  url: "http://localhost:3005/postwidget" 
 
-        await axios({ method: "POST", url: "http://localhost:3005/postwidget" , data: post }).catch((err) => {
+        await axios({ method: "POST", url:"https://memories-server-sigma.vercel.app/postwidget", data: post }).catch((err) => {
             console.log(err)
         }).finally(() => {
             navigate("/layout/home")
