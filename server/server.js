@@ -19,7 +19,7 @@ app.use(cors({
     origin:["https://memories-server-two.vercel.app/"],
     methods:["GET","POST","PUT"],
     credentials:true
-}));
+}));    
 
 //middleware
 app.use("/", postRoutes);
