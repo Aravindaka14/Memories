@@ -16,8 +16,8 @@ app.use(express.urlencoded({ extended: false }))
 app.use(mul.array())
 dotenv.config();
 app.use(cors({
-    origin:["https://memories-aravindak.vercel.app/"],
-    methods:["GET","POST","PUT"],
+    origin:"https://memories-aravindak.vercel.app/",
+    methods:["GET","POST","PUT","PATCH","DELETE"],
     credentials:true
 }));    
 
