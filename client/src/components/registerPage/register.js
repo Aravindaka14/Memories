@@ -15,7 +15,7 @@ const Register = () => {
         // local host - url: "http://localhost:3005/register"
         
         axios({
-            url: "https://memories-server-sigma.vercel.app/register",
+            url: "https://memories-server-delta.vercel.app/register",
             method: "POST",
             data: registerState
         }).then((res) => {

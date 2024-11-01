@@ -11,7 +11,7 @@ const Home = () => {
     // http://localhost:3005/home
     
     useEffect(() => {
-        axios.get("https://memories-server-sigma.vercel.app/home").then((data) => {
+        axios.get("https://memories-server-delta.vercel.app/home").then((data) => {
             setPosts(data.data.reverse())
         }).catch((err) => {
             console.log(err)
@@ -24,7 +24,7 @@ const Home = () => {
     //local host - url
     // http://localhost:3005/home/update
 
-        axios({ url: "https://memories-server-sigma.vercel.app/home/update", method: "PUT", data: { id: id } }).then((post) => {
+        axios({ url: "https://memories-server-delta.vercel.app/home/update", method: "PUT", data: { id: id } }).then((post) => {
             setUpdate(!update)
         }).catch((err) => {
             console.log(err)

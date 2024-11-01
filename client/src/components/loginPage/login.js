@@ -16,7 +16,7 @@ const Login = () => {
         //local host - url: "http://localhost:3005/login",
 
         axios({
-            url: "https://memories-server-sigma.vercel.app/login",           
+            url: "https://memories-server-delta.vercel.app/login",           
             method: "POST",
             data: { email: loginState.email, password: loginState.password }
         }).then((response) => {

@@ -17,7 +17,7 @@ const PostWidget = () => {
         
     // local host  -  url: "http://localhost:3005/postwidget" 
 
-        await axios({ method: "POST", url:"https://memories-server-sigma.vercel.app/postwidget", data: post }).catch((err) => {
+        await axios({ method: "POST", url:"https://memories-server-delta.vercel.app/postwidget", data: post }).catch((err) => {
             console.log(err)
         }).finally(() => {
             navigate("/layout/home")
