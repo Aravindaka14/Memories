@@ -8,48 +8,32 @@ import FileBase64 from "react-file-base64";
 const PostWidget = () => {
     const navigate = useNavigate()
     const [post, setPost] = useState({})
-    const name = localStorage.getItem("userName")
+    // const name = localStorage.getItem("userName")
     const handleData = async (e) => {
         e.preventDefault()
-        //"https://memories-cwyy.onrender.com/postwidget" 
-        await axios({ method: "POST", url: "http://localhost:3005/postwidget", data: post }).catch((err) => {
+        
+        // "https://memories-cwyy.onrender.com/postwidget"
+
+        await axios({ method: "POST", url: "http://localhost:3005/postwidget" , data: post }).catch((err) => {
             console.log(err)
         }).finally(() => {
-            navigate("/home")
+            navigate("/layout/home")
         })
     }
-    const handlePath = (path) => {
-        navigate(`/${path}`)
-    }
-    const logout = () => {
-        localStorage.removeItem('userName')
-        navigate('/')
-    }
     return (
-        <div className="formDiv">
-            <header>
-                <i className="fa fa-instagram"></i>
-                <span>Memories</span>
-                <select onChange={() => logout()}>
-                    <option>{name}</option>
-                    <option>Logout</option>
-                </select>
-                <button className="camera" onClick={() => handlePath("postWidget")}><i className="fa fa-camera"></i></button>
-                <button className="camera" onClick={() => handlePath("home")}><i className="fa fa-home"></i></button>
-            </header>
-            <form id="post-form" onSubmit={handleData} >
-                <h3 id="post-form-title">Share your post here...</h3>
-                <div id="filebase64">
-                    <FileBase64 type="file" onDone={(base64) => { setPost({ ...post, image: base64 }) }} required={true} ></FileBase64>
-                </div>
-                <input className="post-form-input" type="text" placeholder="Author..." onChange={(e) => { setPost({ ...post, name: e.target.value }) }} required={true} />
-                <input className="post-form-input" type="text" placeholder="Location..." onChange={(e) => { setPost({ ...post, location: e.target.value }) }} required={true} />
-                <input className="post-form-input" type="text" placeholder="Description..." onChange={(e) => { setPost({ ...post, description: e.target.value }) }} required={true} />
-                <button className="post-form-btn" type="submit">Post</button>
-            </form>
-            <footer id="form-footer">
-                &copy; 2024 - All Rights Reserved.
-            </footer>
+        <div id="pageContainer">
+            <main id="postWidMain">
+                <form id="postForm" onSubmit={handleData} >
+                    <h3 id="postFormTitle">Share your post here...</h3>
+                    <div id="filebase64">
+                        <FileBase64 type="file" onDone={(base64) => { setPost({ ...post, image: base64 }) }} required={true} ></FileBase64>
+                    </div>
+                    <input className="postFormInput" type="text" placeholder="Author..." onChange={(e) => { setPost({ ...post, name: e.target.value }) }} required={true} />
+                    <input className="postFormInput" type="text" placeholder="Location..." onChange={(e) => { setPost({ ...post, location: e.target.value }) }} required={true} />
+                    <input className="postFormInput" type="text" placeholder="Description..." onChange={(e) => { setPost({ ...post, description: e.target.value }) }} required={true} />
+                    <button className="postFormBtn" type="submit">Post</button>
+                </form>
+            </main>
         </div>
     )
 }

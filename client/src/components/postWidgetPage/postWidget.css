@@ -1,78 +1,130 @@
-.formDiv {
+#pageContainer {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     background-color: #F6F6F6;
-    height: 100vh;
-    font-family: "Rubik", sans-serif;
 }
 
-#post-form {
-    display: grid;
-    top: 229px;
-    left: 860px;
-    width: 480px;
-    height: 550px;
-    border-radius: 16px;
-    margin: 50px 0 0 35%;
+#postWidHeader {
+    display: flex;
+    height: 8vh;
+    min-width: 100vw;
+    justify-content: space-between;
+    border-bottom: 2px solid #006238;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 600;
+    color: crimson;
+    padding: 0.75rem 3rem;
+}
+
+.fa-instagram {
+    font-weight: 600;
+    padding: 0 0.25rem 0 0;
+}
+
+.headerIcons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0.85rem 1.75rem;
+}
+
+.camera {
+    background-color: #F6F6F6;
+    border: none;
+    font-size: 1.75rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
+
+.headerIcons select {
+    font-size: 1rem;
+    border: none;
+    padding: 0 0.25rem;
+    margin: 0 0.5rem;
+    border-radius: 0.35rem;
+    box-shadow: 2px 2px 4px 1px lightgrey;
+    cursor: pointer;
+}
+
+.headerIcons select:focus {
+    outline: none;
+}
+
+#postWidMain {
+    min-height: 86.5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#postForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
     background-color: white;
-    font-family: "Rubik", sans-serif;
     box-shadow: 0px 2px 6px 2px lightgrey;
 }
 
-#post-form-title {
-    text-align: center;
+#postFormTitle {
+    margin: 3rem 5rem 1.5rem 5rem;
     color: #006238;
-    font-size: x-large;
+    font-size: 1.5rem;
     border-bottom: 1px solid #006238;
     padding-top: 6px;
 }
 
-.post-form-input {
-    height: 35px;
-    width: 220px;
-    margin: 22px 0 0 70px;
-    padding-right: 100px;
-    border-radius: 5px;
-    font-size: medium;
-    padding-left: 20px;
-    background-color: #F6F6F6;
-    border-color: lightgray;
-    font-family: "Rubik", sans-serif;
+.postFormInput {
+    margin: 1rem 5rem;
+    padding: 0.8rem 5rem 0.8rem 1rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid gray;
+}
+
+.postFormInput:focus {
+    border: none;
+    outline: 2px dashed #006238;
 }
 
 #filebase64 {
     color: #006238;
-    margin: 22px 0 0 150px;
-    font-size: large;
+    font-size: 1.5rem;
+    margin: 1rem;
 }
 
-.post-form-btn {
-    margin: 22px 0 0 200px;
-    height: 28px;
-    width: 70px;
+.postFormBtn {
+    padding: 0.4rem;
+    margin: 1rem;
+    width: 25%;
     border: 1px solid #006238;
     border-radius: 5px;
-    font-size: medium;
+    font-size: 1rem;
     color: lightgray;
     background-color: #006238;
-    font-family: "Rubik", sans-serif;
 }
 
 
-.post-form-btn:hover {
+.postFormBtn:hover {
     color: white;
     background-color: crimson;
     border-color: crimson;
     font-weight: bold;
     cursor: pointer;
+    transform: translateY(-3px);
 }
 
-#form-footer {
+#formFooter {
     text-align: center;
     color: #F6F6F6;
     background-color: #006238;
     height: 4vh;
-    position: relative;
-    width: 100%;
-    top: 28px;
-    padding-top: 6px;
-    margin-top: 20px;
+    padding-top: 0.5rem;
+    min-width: 100vw;
 }

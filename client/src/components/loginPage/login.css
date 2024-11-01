@@ -1,6 +1,9 @@
 #pageContainer {
-    width: 100vw;
-    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #f6f6f6;
     display: flex;
     margin: auto;
@@ -9,65 +12,62 @@
 #innerContainer {
     display: flex;
     width: 70vw;
-    min-height: 92.5vh;
+    min-height: 80vh;
     box-shadow: 2px 2px 6px 2px lightgrey;
-    border-radius: 1rem;
+    border-radius: 2rem;
     background-color: floralwhite;
-    /* margin: 8vh 15vw; */
-    margin:auto;
 }
 
 #innerContainer img {
     width: 35vw;
-    min-height: 90vh;
     border-radius: 1rem 0 0 1rem;
+    object-fit: cover;
 }
 
-#login-title {
+#loginTitle {
     color: #006238;
-    font-size: x-large;
-    letter-spacing: 0.15rem;
+    font-size: 2rem;
     text-align: center;
-    text-decoration-line: underline;
+    /* text-decoration-line: underline; */
+    margin: 4rem 0 4rem 0;    
 }
 
-.login-right-div {
+.loginRightDiv {
     width: 35vw;
-    height: 80vh;
-    padding: 4rem 0 0 0;
+    min-height: 80vh;
 }
 
-#login-form {
+#loginForm {
     display: flex;
     flex-direction: column;
 }
 
-#login-form label {
-    padding: 0.75rem;
-    margin-left: 3rem;
-    font-size: medium;
+#loginForm label {
+    padding: 10px;
+    margin-left: 50px;
+    font-size: large;
     color: seagreen;
 }
 
-#login-form input {
-    padding: 0.75rem;
-    margin: 0 3.75rem 1.25rem 3.75rem;
-    font-size: medium;
+#loginForm input {
+    padding: 15px;
+    margin: 0 60px 20px 60px;
     border-radius: 5px;
     border: 1px solid grey;
     background-color: floralwhite;
 }
 
-#login-form input:focus {
+#loginForm input:focus {
     border: none;
     outline: #006238 solid 2px;
 }
 
 .login-form-btn {
-    padding: 0.5rem 1rem;
-    margin: auto;
+    padding: 8px;
+    margin: 20px 190px;
+    width: 100px;
     border-radius: 5px;
-    font-size: medium;
+    font-size: 1rem;
     background-color: crimson;
     border: 1px solid crimson;
     color: white;
@@ -75,20 +75,23 @@
     letter-spacing: 0.1rem;
 }
 
-.login-form-btn:hover {
+.loginFormBtn:hover {
     cursor: pointer;
     background-color: #006238;
     border: 1px solid #006238;
     font-weight: bold;
 }
 
-#navigate-section {
-    /* padding: 50px 0 0 110px; */
-    padding: 2rem 4rem;
-    font-size: medium;
+/* #navSectionLog {
+    padding: 50px 0 0 110px;
+    font-size: 18px;
+} */
+#navSectionLog {
+    margin-left: 3rem;
+    padding: 1rem;
 }
 
-.form-btn {
+.formBtn {
     color: seagreen;
     border: none;
     background-color: floralwhite;
@@ -96,7 +99,7 @@
     letter-spacing: 0.1rem;
 }
 
-.form-btn:hover {
+.formBtn:hover {
     cursor: pointer;
     color: #006238;
     text-decoration-line: underline;
@@ -116,27 +119,22 @@
 }
 
 .errBox {
-    border-radius: 15px;
+    border-radius: 5px;
     color: red;
     background-color: lavenderblush;
     position: absolute;
-    left: 33%;
-    padding: 70px 120px;
-    border: 2px solid crimson;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items: center;
+    left: 30%;
+    padding: 70px 150px;
 }
 
 .errBox button {
     margin: 15px 90px;
-    padding: 5px 15px;
+    padding: 5px 10px;
     border-radius: 5px;
     border: 1px solid cornflowerblue;
     background-color: cornflowerblue;
     color: white;
-    font-size: 16px;
+    font-size: 1rem;
     letter-spacing: 0.25em;
 }
 

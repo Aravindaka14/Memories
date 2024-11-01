@@ -19,7 +19,7 @@ const Login = () => {
             data: { email: loginState.email, password: loginState.password }
         }).then((response) => {
             localStorage.setItem("userName", response.data[0].name)
-            navigate('home')
+            navigate('/layout/home')
         }).catch((err) => {
             // console.log(err.response.data)
             setUserErr(err.response.data)
@@ -29,27 +29,27 @@ const Login = () => {
         navigate(`/${path}`)
     }
     return (
-        <div id="pageContainer" >
+
+       <div id="pageContainer" >
             {userErr !== "" ? <div className="errContainer"> <div className="errBox"> <h2>{userErr}</h2><button onClick={() => { setUserErr('') }}>Retry</button></div></div> : null}
             {/* <br></br> */}
             <div id="innerContainer">
-                <img src="bg-01.jpg" alt='coverPhoto' />
-                <div className="login-right-div">
-                    <h3 id='login-title'>Login Page</h3>
-                    <form id="login-form" onSubmit={sendLoginInput}>
+                    <img src="bg-02.png" alt="coverPhoto"/>
+                <div className="loginRightDiv">
+                    <h3 id='loginTitle'>Welcome back!</h3>
+                    <form id="loginForm" onSubmit={sendLoginInput}>
                         <label htmlFor='loginEmail'>Your Email:</label>
                         <input id='loginEmail' type="email" placeholder="email..." onChange={(e) => { setLoginState({ ...loginState, email: e.target.value }) }} required={true}></input>
                         <label htmlFor='loginPassword'>Password:</label>
                         <input id="loginPassword" type="password" placeholder="password..." onChange={(e) => { setLoginState({ ...loginState, password: e.target.value }) }} required={true}></input>
-                        <button className="login-form-btn" type="submit">Submit</button>
+                        <button className="loginFormBtn" type="submit">Submit</button> 
                     </form>
-                    <div id="navigate-section">
-                        <p>Don't have an account: <button className="form-btn" onClick={() => { handlePath('register') }}>Register</button></p>
+                    <div id="navSectionLog">
+                        <p>Don't have an account: <button className="formBtn" onClick={() => { handlePath('register') }}>Register</button></p>
                     </div>
                 </div>
             </div>
         </div>
     )
 };
-
 export default Login;

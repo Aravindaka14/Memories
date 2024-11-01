@@ -1,0 +1,18 @@
+#homeWidHeader {
+    display: flex;
+    width: inherit;
+    max-width: 100vw;
+    height: 8vh;
+    justify-content: space-between;
+    border-bottom: solid 2px #006238;
+    background-color: #F6F6F6;
+}
+
+
+.camera {
+    background-color: #F6F6F6;
+    border: none;
+    font-size: 1.75rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
