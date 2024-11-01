@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: false }))
 app.use(mul.array())
 dotenv.config();
 app.use(cors({
-    origin:["https://memories-five-mu.vercel.app/"],
+    origin:["https://memories-server-two.vercel.app/"],
     methods:["GET","POST","PUT"],
     credentials:true
 }));
